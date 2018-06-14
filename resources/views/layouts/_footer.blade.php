@@ -1,9 +1,8 @@
-<div class="col-md-12">
-  <footer class="footer navbar-fixed-bottom">
-    <div class="container-fluid">
+<footer class="container-fluid foot-wrap">
+  <div class="col-md-12">
     <small class="slogon">
-    <img class="brand-icon" src="https://lccdn.phphub.org/uploads/images/201612/12/1/iq7WQc2iuW.png?imageView2/1/w/34/h/34">
-    <a href="https://laravel-china.org/courses">
+    <img class="brand-icon" src="/img/UnrealHandbook_logo_b50.png">
+    <a href="{{ route('home') }}">
       刻意练习，每日精进
     </a>
     </small>
@@ -12,6 +11,5 @@
         <li><a href="{{ route('about') }}">关于</a></li>
       </ul>
     </nav>
-    </div>
-  </footer>
-</div>
+  </div>
+</footer>

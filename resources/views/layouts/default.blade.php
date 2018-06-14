@@ -5,28 +5,44 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Unreal Engine学习、开发者社区，致力于unreal引擎学习交流平台。"/>
+    <meta name="keywords" content="unreal,蓝图,3D游戏引擎,unreal社区,unreal教程,unreal视频,unreal新手,UE4"/>
     
     <!-- Bootstrap CSS 自定义样式 -->
     <link rel="stylesheet" href="/css/app.css">
+
     <title>@yield('title', 'Unreal驿站') - Unreal驿站</title>
     
   </head>
   <body>
+    <noscript>
+      <h1>这个页面需要浏览器支持（启用）JavaScript</h1>
+    </noscript>
+
     <!-- 引入头部文件 -->
     @include('layouts._header')
     
-    <div class="container">
-      <div class="col-md-offset-1 col-md-10">
-        @yield('content')
-        @include('layouts._footer')
-      </div>
+    <div class="container-fluid">
+      @yield('content')
+      @include('layouts._footer')
     </div>
-    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- 用于支持手势滑动 -->
+    <script src="/plugins/jquery.hammer.js-master/jquery.hammer.js"></script>
+
   </body>
+  <script type="text/javascript">
+    $('#carousel-generic').hammer().on('swipeleft', function(){  
+    $(this).carousel('next');});  
+  
+    $('#carousel-generic').hammer().on('swiperight', function(){  
+    $(this).carousel('prev');});
+  </script>
 </html>

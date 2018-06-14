@@ -8353,6 +8353,9 @@ button.close {
 /* universal */
 
 body {
+  font-family: 'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti;
+  font-size: 16px;
+  background-color: #555555;
   padding-top: 60px;
 }
 
@@ -8403,16 +8406,18 @@ p {
 /* header */
 
 .navbar-inverse {
+  font-size: 1.1em;
   background-color: #3c3e42;
 }
 
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 20px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  font-size: 1.1em;
+  background-color: #3c3e42;
 }
 
 footer a {
@@ -8445,5 +8450,11 @@ footer img.brand-icon {
 footer .slogon {
   font-size: 13px;
   font-weight: bold;
+}
+
+/* home carousel*/
+
+.carousel-inner {
+  max-height: 400px;
 }
 

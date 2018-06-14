@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <a class="navbar-left" href="{{ route('home') }}"><img width="45" alt="UnrealHandbook" style="max-width:100px;margin-top:5px;margin-right:10px;" src="/img/UnrealHandbook_logo_50.png"></a>
+        <a class="navbar-left" href="{{ route('home') }}"><img width="45" alt="UnrealHandbook" style="max-width:100px;margin-top:5px;margin-right:10px;" src="/img/UnrealHandbook_logo_b50.png"></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

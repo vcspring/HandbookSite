@@ -11,10 +11,15 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 $navbar-color: #3c3e42;
+$body-color: #555555;
+$base-font-size: 16px;
 
 /* universal */
 
 body {
+  font-family:'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti;
+  font-size: $base-font-size;
+  background-color: $body-color;
   padding-top: 60px;
 }
 
@@ -63,6 +68,7 @@ header{
 }
 
 .navbar-inverse {
+  font-size: 1.1em;
   background-color: $navbar-color;
 }
 
@@ -70,10 +76,11 @@ header{
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 20px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  font-size: 1.1em;
+  background-color: $navbar-color;
 
   a {
     color: #555;
@@ -106,4 +113,9 @@ footer {
     font-size: 13px;
     font-weight: bold;
   }
+}
+
+/* home carousel*/
+.carousel-inner{
+  max-height: 400px;
 }
