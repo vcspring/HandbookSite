@@ -11,8 +11,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 $navbar-color: #3c3e42;
-$body-color: #555555;
-$base-font-size: 16px;
+$body-color: #F5F5F5;
+$font-color: #A4A4A4;
+$section-color: #f8f8ff;
+$base-font-size: 14px;
 
 /* universal */
 
@@ -20,11 +22,14 @@ body {
   font-family:'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti;
   font-size: $base-font-size;
   background-color: $body-color;
-  padding-top: 60px;
+  padding-top: 5px;
 }
 
 section {
   overflow: auto;
+  background-color: $section-color;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 textarea {
@@ -35,8 +40,46 @@ textarea {
   text-align: center;
 }
 
-/* typography */
+.panel-heading {
+  text-align: center;
+  vertical-align: middle;
+}
 
+.topic-filter {
+  text-align: left;
+  line-height: 105%;
+  padding-top: 10px;
+
+  li {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    a {
+      color: #a2a2a2;
+      padding: 3px;
+      text-decoration: none;
+    }
+    .active {
+        border-bottom: 2px solid #fbbd08;
+      }
+  }
+}
+
+.tooltip-inner {
+  font-size: 1.2em;
+  line-height: 200%;
+  line-width: 200%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* 下拉菜单悬停展开 */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -70,24 +113,59 @@ header{
 .navbar-inverse {
   font-size: 1.1em;
   background-color: $navbar-color;
+  border-top: 4px solid #3d85c6;
+
+  .github-login {
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-left: 10px;
+  }
+
+  .dropdown-menu {
+    padding: 0px;
+    margin: 0px;
+    min-width: 100%;
+    background-color: transparent;
+    li {
+      margin: 0px;
+      height: 35px;
+      background-color: #c9c9c9;
+      a {
+        margin: 0px;
+        height: 35px;
+        line-height: 35px;
+        .fa {
+          padding-right: 20px;
+        }
+      }
+    }
+    .divider {
+      background-color: transparent;
+      height: 2px;
+    }
+  }
 }
 
 
 /* footer */
-
 footer {
-  margin-top: 20px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  font-size: 1.1em;
-  background-color: $navbar-color;
+  background: $navbar-color;
+  position: absolute;
+  padding: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-top: -100px;   /*footer高度的负值*/
+  height: 100px;
+  width: 100%;
+  clear: both;
 
   a {
-    color: #555;
+    color: $font-color;
+    font-size: 1.2em;
   }
 
   a:hover {
-    color: #222;
+    color: #FFFFFF;
   }
 
   small {
@@ -119,3 +197,37 @@ footer {
 .carousel-inner{
   max-height: 400px;
 }
+
+section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+
+    p {
+      font-size: 0.75em;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+/* forms注册 */
+
+

@@ -12,6 +12,12 @@
     <!-- Bootstrap CSS 自定义样式 -->
     <link rel="stylesheet" href="/css/app.css">
 
+    <!-- Font Awesome 字体 -->
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>@yield('title', 'Unreal驿站') - Unreal驿站</title>
     
   </head>
@@ -20,10 +26,10 @@
       <h1>这个页面需要浏览器支持（启用）JavaScript</h1>
     </noscript>
 
-    <!-- 引入头部文件 -->
     @include('layouts._header')
     
     <div class="container-fluid">
+      @include('shared._messages')      
       @yield('content')
       @include('layouts._footer')
     </div>
@@ -36,6 +42,16 @@
 
     <!-- 用于支持手势滑动 -->
     <script src="/plugins/jquery.hammer.js-master/jquery.hammer.js"></script>
+
+    <script>
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
+
+    <script>
+    $(function (){
+        $("[data-toggle='popover']").popover();
+    });
+</script>
 
   </body>
   <script type="text/javascript">
