@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="row">
-  <div class="col-md-offset-3 col-md-6">
+  <div id="usercreate-panel" class="col-md-offset-3 col-md-6">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3>注册</h3>

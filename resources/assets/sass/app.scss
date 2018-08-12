@@ -22,8 +22,126 @@ body {
   font-family:'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti;
   font-size: $base-font-size;
   background-color: $body-color;
-  padding-top: 5px;
+  display: block;
 }
+
+html,body {
+  margin: 0;
+  padding:0;
+  height: 100%;
+}
+
+#container {
+  min-height:100%;
+  height: auto !important;
+  height: 100%; /*IE6不识别min-height*/
+  position: relative;
+}
+
+/* header */
+#header{
+  .navbar-inverse {
+    font-size: 1.1em;
+    background-color: $navbar-color;
+    border-top: 4px solid #3d85c6;
+
+    .github-login {
+      padding-right: 15px;
+      padding-top: 8px;
+      padding-left: 10px;
+      .nav-item {
+      
+      }
+      .login-btn {
+        height: 35px;
+        line-height: 35px;
+        padding-top: 0px;
+        margin-left: 10px;
+
+      }
+    }
+
+    .dropdown-menu {
+      padding: 0px;
+      margin: 0px;
+      min-width: 100%;
+      background-color: transparent;
+      li {
+        margin: 0px;
+        height: 35px;
+        background-color: #c9c9c9;
+        a {
+          margin: 0px;
+          height: 35px;
+          line-height: 35px;
+          .fa {
+            padding-right: 20px;
+          }
+        }
+      }
+      .divider {
+        background-color: transparent;
+        height: 2px;
+      }
+    }
+    #logout {
+      cursor: default;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/* page */
+#page {
+  padding-bottom: 60px;/*等于footer的高度*/
+  height: 100%;
+}
+
+/* footer */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;/*脚部的高度*/
+  background: $navbar-color;
+  clear:both;
+
+  a {
+    color: $font-color;
+    font-size: 1.2em;
+  }
+
+  a:hover {
+    color: #FFFFFF;
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .slogon {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
 
 section {
   overflow: auto;
@@ -105,95 +223,11 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
-header{
-  
-}
-
-.navbar-inverse {
-  font-size: 1.1em;
-  background-color: $navbar-color;
-  border-top: 4px solid #3d85c6;
-
-  .github-login {
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-left: 10px;
-  }
-
-  .dropdown-menu {
-    padding: 0px;
-    margin: 0px;
-    min-width: 100%;
-    background-color: transparent;
-    li {
-      margin: 0px;
-      height: 35px;
-      background-color: #c9c9c9;
-      a {
-        margin: 0px;
-        height: 35px;
-        line-height: 35px;
-        .fa {
-          padding-right: 20px;
-        }
-      }
-    }
-    .divider {
-      background-color: transparent;
-      height: 2px;
-    }
-  }
-}
-
-
-/* footer */
-footer {
-  background: $navbar-color;
-  position: absolute;
-  padding: 0px;
-  left: 0px;
-  bottom: 0px;
-  margin-top: -100px;   /*footer高度的负值*/
-  height: 100px;
-  width: 100%;
-  clear: both;
-
-  a {
-    color: $font-color;
-    font-size: 1.2em;
-  }
-
-  a:hover {
-    color: #FFFFFF;
-  }
-
-  small {
-    float: left;
-  }
-
-  ul {
-    float: right;
-    list-style: none;
-
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-
-  img.brand-icon {
-    width: 17px;
-    height: 17px;
-  }
-
-  .slogon {
-    font-size: 13px;
-    font-weight: bold;
-  }
-}
 
 /* home carousel*/
+#carousel-home{
+  margin-bottom: 20px;
+}
 .carousel-inner{
   max-height: 400px;
 }
@@ -228,6 +262,24 @@ section.user_info {
   border-radius: 50%;
 }
 
-/* forms注册 */
+/* flash message */
+.flash-message {
+  width: 50%;
+  .alert {
+    text-align: center;
+  }
+}
+
+/* 单页格式定义 */
+
+/* login page */
+#login-panel {
+  padding-top: 50px;
+}
+
+/* user create page */
+#usercreate-panel {
+  padding-top: 50px;
+}
 
 

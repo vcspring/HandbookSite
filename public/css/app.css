@@ -8356,7 +8356,132 @@ body {
   font-family: 'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti;
   font-size: 14px;
   background-color: #F5F5F5;
-  padding-top: 5px;
+  display: block;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /*IE6不识别min-height*/
+  position: relative;
+}
+
+/* header */
+
+#header .navbar-inverse {
+  font-size: 1.1em;
+  background-color: #3c3e42;
+  border-top: 4px solid #3d85c6;
+}
+
+#header .navbar-inverse .github-login {
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+#header .navbar-inverse .github-login .login-btn {
+  height: 35px;
+  line-height: 35px;
+  padding-top: 0px;
+  margin-left: 10px;
+}
+
+#header .navbar-inverse .dropdown-menu {
+  padding: 0px;
+  margin: 0px;
+  min-width: 100%;
+  background-color: transparent;
+}
+
+#header .navbar-inverse .dropdown-menu li {
+  margin: 0px;
+  height: 35px;
+  background-color: #c9c9c9;
+}
+
+#header .navbar-inverse .dropdown-menu li a {
+  margin: 0px;
+  height: 35px;
+  line-height: 35px;
+}
+
+#header .navbar-inverse .dropdown-menu li a .fa {
+  padding-right: 20px;
+}
+
+#header .navbar-inverse .dropdown-menu .divider {
+  background-color: transparent;
+  height: 2px;
+}
+
+#header .navbar-inverse #logout {
+  cursor: default;
+}
+
+#header .navbar-inverse #logout:hover {
+  background-color: transparent;
+}
+
+/* page */
+
+#page {
+  padding-bottom: 60px;
+  /*等于footer的高度*/
+  height: 100%;
+}
+
+/* footer */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /*脚部的高度*/
+  background: #3c3e42;
+  clear: both;
+}
+
+#footer a {
+  color: #A4A4A4;
+  font-size: 1.2em;
+}
+
+#footer a:hover {
+  color: #FFFFFF;
+}
+
+#footer small {
+  float: left;
+}
+
+#footer ul {
+  float: right;
+  list-style: none;
+}
+
+#footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+#footer img.brand-icon {
+  width: 17px;
+  height: 17px;
+}
+
+#footer .slogon {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 section {
@@ -8447,97 +8572,11 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
-
-.navbar-inverse {
-  font-size: 1.1em;
-  background-color: #3c3e42;
-  border-top: 4px solid #3d85c6;
-}
-
-.navbar-inverse .github-login {
-  padding-right: 15px;
-  padding-top: 8px;
-  padding-left: 10px;
-}
-
-.navbar-inverse .dropdown-menu {
-  padding: 0px;
-  margin: 0px;
-  min-width: 100%;
-  background-color: transparent;
-}
-
-.navbar-inverse .dropdown-menu li {
-  margin: 0px;
-  height: 35px;
-  background-color: #c9c9c9;
-}
-
-.navbar-inverse .dropdown-menu li a {
-  margin: 0px;
-  height: 35px;
-  line-height: 35px;
-}
-
-.navbar-inverse .dropdown-menu li a .fa {
-  padding-right: 20px;
-}
-
-.navbar-inverse .dropdown-menu .divider {
-  background-color: transparent;
-  height: 2px;
-}
-
-/* footer */
-
-footer {
-  background: #3c3e42;
-  position: absolute;
-  padding: 0px;
-  left: 0px;
-  bottom: 0px;
-  margin-top: -100px;
-  /*footer高度的负值*/
-  height: 100px;
-  width: 100%;
-  clear: both;
-}
-
-footer a {
-  color: #A4A4A4;
-  font-size: 1.2em;
-}
-
-footer a:hover {
-  color: #FFFFFF;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
-footer img.brand-icon {
-  width: 17px;
-  height: 17px;
-}
-
-footer .slogon {
-  font-size: 13px;
-  font-weight: bold;
-}
-
 /* home carousel*/
+
+#carousel-home {
+  margin-bottom: 20px;
+}
 
 .carousel-inner {
   max-height: 400px;
@@ -8575,5 +8614,27 @@ section.user_info h1 p {
   border-radius: 50%;
 }
 
-/* forms注册 */
+/* flash message */
+
+.flash-message {
+  width: 50%;
+}
+
+.flash-message .alert {
+  text-align: center;
+}
+
+/* 单页格式定义 */
+
+/* login page */
+
+#login-panel {
+  padding-top: 50px;
+}
+
+/* user create page */
+
+#usercreate-panel {
+  padding-top: 50px;
+}
 

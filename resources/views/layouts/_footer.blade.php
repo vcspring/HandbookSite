@@ -1,4 +1,4 @@
-<footer class="container-fluid foot-wrap">
+<div class="container">
   <div class="col-md-12">
     <small class="slogon">
     <img class="brand-icon" src="/img/UnrealHandbook_logo_b50.png">
@@ -12,4 +12,4 @@
       </ul>
     </nav>
   </div>
-</footer>
+</div>

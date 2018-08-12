@@ -26,14 +26,21 @@
       <h1>这个页面需要浏览器支持（启用）JavaScript</h1>
     </noscript>
 
-    @include('layouts._header')
-    
-    <div class="container-fluid">
-      @include('shared._messages')      
-      @yield('content')
-      @include('layouts._footer')
+    <div id="container">
+      <header id="header">
+        @include('layouts._header')
+      </header>
+
+      <div id="page" class="container-fluid">
+        @include('shared._messages')      
+        @yield('content')
+      </div>
+
+      <footer id="footer" class="footer">
+        @include('layouts._footer')
+      </footer>
     </div>
-    
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -51,7 +58,7 @@
     $(function (){
         $("[data-toggle='popover']").popover();
     });
-</script>
+    </script>
 
   </body>
   <script type="text/javascript">
